@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>v-model</title>
+    <script src="vuejs-2.5.16.js"></script>
+</head>
+<style>
+    .box-wrap {
+        text-align: right;
+        float: right;
+        overflow: hidden;
+        width: 600px;
+        height: 600px;
+    }
+    .right{
+        text-align: left;
+        float: left;
+    }
+    .box-wrap > div {
+        width: 199px;
+        height: 199px;
+        margin: 0.1px;
+        float: left;
+        background: black;
+    }
+</style>
+<body>
+<div id="app">
+    <div class="right">
+        <input type="text" placeholder="鼠标点击此处开始拼图" @keydown.up="up" @keydown.down="down" @keydown.left="left" @keydown.right="right" @keyup="checkList" @click="timeGo"><br>
+        您一共走了：{{step}}步<br>
+        您总共用时：{{totalTime}}秒<br><br>
+        原图<br>
+		<img src="img/9.jpg" width="300px" height="300px">
+    </div>
+    <div class="box-wrap">
+        <div class="box">
+            <img :src=list[0] width="199px" height="199px">
+        </div>
+        <div class="box">
+            <img :src=list[1] width="199px" height="199px">
+        </div>
+        <div class="box">
+            <img :src=list[2] width="199px" height="199px">
+        </div>
+        <div class="box">
+            <img :src=list[3] width="199px" height="199px">
+        </div>
+        <div class="box">
+            <img :src=list[4] width="199px" height="199px">
+        </div>
+        <div class="box">
+            <img :src=list[5] width="199px" height="199px">
+        </div>
+        <div class="box">
+            <img :src=list[6] width="199px" height="199px">
+        </div>
+        <div class="box">
+            <img :src=list[7] width="199px" height="199px">
+        </div>
+        <div class="box">
+            <img :src=list[8] width="199px" height="199px">
+        </div>
+    </div>
+
+</div>
+<script src="pingtu.js"></script>
+</body>
+</html>
