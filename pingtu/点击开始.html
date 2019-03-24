@@ -32,6 +32,7 @@
 <body>
 <div id="app">
     <div class="right">
+        <h3>拼图小游戏</h3>
         <button id="kaishi" @keydown.up="up" @keydown.down="down" @keydown.left="left" @keydown.right="right" @keyup="checkList" @click="timeGo">start</button><br>
         您总共走了：{{step}}步<br>
         您总共用时：{{totalTime}}秒<br><br>
