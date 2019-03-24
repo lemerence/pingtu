@@ -24,11 +24,15 @@
         float: left;
         background: black;
     }
+    #kaishi{
+        width: 80px;
+        height: 30px;
+    }
 </style>
 <body>
 <div id="app">
     <div class="right">
-        <input type="text" placeholder="鼠标点击此处开始拼图" @keydown.up="up" @keydown.down="down" @keydown.left="left" @keydown.right="right" @keyup="checkList" @click="timeGo"><br>
+        <button id="kaishi" @keydown.up="up" @keydown.down="down" @keydown.left="left" @keydown.right="right" @keyup="checkList" @click="timeGo">开始</button><br>
         您一共走了：{{step}}步<br>
         您总共用时：{{totalTime}}秒<br><br>
         原图<br>
